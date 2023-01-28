@@ -1,8 +1,8 @@
 <div class="header">
     <span class="header-text">Where in the world?</span>
     <span class="header-mode" (click)="toggleDarkMode()">
-        <img *ngIf="theme === 'Dark'" class="moon-icon" src="/moon.svg">
-        <img *ngIf="theme !== 'Dark'" class="moon-icon" src="/moon-white.svg">
+        <img *ngIf="theme === 'Dark'" class="moon-icon" src="moon.svg">
+        <img *ngIf="theme !== 'Dark'" class="moon-icon" src="moon-white.svg">
         {{theme === "Dark" ? "Dark Mode" : "Light Mode"}}
     </span>
 </div>
