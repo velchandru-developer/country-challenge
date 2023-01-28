@@ -19,7 +19,7 @@
                 padding: 20px 20px 20px 40px;
                 border: none;
                 width: calc(100% - 60px);
-                background: url(/assets/svg/search.svg) no-repeat scroll 11px 15px;
+                background: url(/src/assets/svg/search.svg) no-repeat scroll 11px 15px;
                 color: var(--black);
 
                 &::placeholder {
@@ -27,7 +27,7 @@
                 }
 
                 &.dark-input {
-                    background: url(/assets/svg/search-white.svg) no-repeat scroll 11px 15px;
+                    background: url(/src/assets/svg/search-white.svg) no-repeat scroll 11px 15px;
                 }
                 
             }
