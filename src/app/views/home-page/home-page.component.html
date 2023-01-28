@@ -1,0 +1,26 @@
+<div class="country-page">
+    <div class="country-filters">
+        <div class="country-input">
+            <input type="text" [ngClass]="{'dark-input' : isDarkMode}" class="input" (input)="searchCountry($event)" placeholder="Search for a country...">
+        </div>
+        <div class="country-region">
+            <select class="region-select" (change)="filterByRegion($event)">
+                <option disabled selected value> Filter by Region </option>
+                <option class="region-option" *ngFor="let region of regions" [value]="region">{{region}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="country-wrap">
+        <div class="country" (click)="goToCountry(country?.name?.official)" *ngFor="let country of countriesList">
+            <img class="country-flag" [src]="country?.flags?.svg" [alt]="country?.name?.official">
+            <p class="country-name">{{country?.name?.official}}</p>
+            <div class="country-details">
+                <p class="country-population"><span class="bold">Population:
+                    </span>{{country?.population?.toLocaleString('en')}}</p>
+                <p class="country-region"><span class="bold">Region: </span>{{country?.region}}</p>
+                <p class="country-capital"><span class="bold">Capital: </span>{{country?.capital}}</p>
+            </div>
+        </div>
+    </div>
+
+</div>

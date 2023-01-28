@@ -1,0 +1,104 @@
+.country-page {
+    background-color: var(--light-grey);
+    max-height: calc(100vh - 92px);
+    overflow: auto;
+
+    .country-filters {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 40px 70px 0;
+        gap: 40px;
+
+        .country-input {
+            width: 400px;
+            background-color: var(--white);
+            border-radius: 5px;
+
+            input {
+                padding: 20px 20px 20px 40px;
+                border: none;
+                width: calc(100% - 60px);
+                background: url(/assets/svg/search.svg) no-repeat scroll 11px 15px;
+                color: var(--black);
+
+                &::placeholder {
+                    color: var(--black);
+                }
+
+                &.dark-input {
+                    background: url(/assets/svg/search-white.svg) no-repeat scroll 11px 15px;
+                }
+                
+            }
+        }
+
+        .country-region {
+            width: 200px;
+
+            .region-select {
+                padding: 20px;
+                cursor: pointer;
+                border-radius: 5px;
+                width: inherit;
+                border: none;
+                background-color: var(--white);
+                color: var(--black);
+
+                option {
+                    color: var(--black);
+                }
+            }
+        }
+    }
+
+    .country-wrap {
+        padding: 40px 60px 40px 70px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px;
+
+        .country {
+            max-width: 220px;
+            background-color: var(--white);
+            border-radius: 5px;
+            cursor: pointer;
+            color: var(--black);
+
+            .country-flag {
+                max-width: 220px;
+                min-width: 220px;
+                max-height: 120px;
+                min-height: 120px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+
+            .country-name,
+            .country-details {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .country-name {
+                font-weight: 800;
+            }
+
+            .country-details {
+                padding-bottom: 30px;
+
+                .country-population,
+                .country-region,
+                .country-capital {
+                    font-size: 14px;
+                    margin-bottom: 4px;
+                    margin-top: 4px;
+                }
+
+                .bold {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

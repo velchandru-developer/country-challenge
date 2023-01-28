@@ -1,0 +1,35 @@
+<div class="country-page-wrap">
+    <div (click)="goBack()" class="back-button">
+        <img *ngIf="!isDarkMode" class="back-icon" src="/assets/svg/arrow-left.svg">
+        <img *ngIf="isDarkMode" class="back-icon" src="/assets/svg/arrow-left-white.svg">
+        <span class="back">Back</span>
+    </div>
+
+    <div class="country-data">
+        <img *ngIf="countryData?.flags?.svg" [src]="countryData?.flags?.svg" [alt]="countryData?.name?.official"
+            class="country-flag">
+        <div class="country-details">
+            <p class="country-title">{{countryData?.name?.common}}</p>
+            <div class="country-sub-details">
+                <div class="country-sub-details-1">
+                    <p class="details"><span class="bold">Native Name: </span>{{nativeName}}</p>
+                    <p class="details"><span class="bold">Population:
+                        </span>{{countryData?.population?.toLocaleString('en')}}</p>
+                    <p class="details"><span class="bold">Region: </span>{{countryData?.region}}</p>
+                    <p class="details"><span class="bold">Sub Region: </span>{{countryData?.subregion}}</p>
+                    <p class="details"><span class="bold">Capital: </span>{{countryData?.capital}}</p>
+                </div>
+                <div class="country-sub-details-2">
+                    <p class="details"><span class="bold">Top Level Domain: </span>{{countryData?.tld}}</p>
+                    <p class="details"><span class="bold">Currencies: </span>{{currencies}}</p>
+                    <p class="details"><span class="bold">Languages: </span>{{languages}}</p>
+                </div>
+            </div>
+            <div class="country-borders">
+                <div class="borders"><span class="bold">Border Countries: </span>
+                    <div class="border" *ngFor="let border of countryData?.borders">{{border}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
