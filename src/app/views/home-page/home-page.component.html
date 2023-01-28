@@ -1,6 +1,8 @@
 <div class="country-page">
     <div class="country-filters">
         <div class="country-input">
+            <img *ngIf="!isDarkMode" class="search-icon" src="search.svg">
+            <img *ngIf="isDarkMode" class="search-icon" src="search-white.svg">
             <input type="text" [ngClass]="{'dark-input' : isDarkMode}" class="input" (input)="searchCountry($event)" placeholder="Search for a country...">
         </div>
         <div class="country-region">

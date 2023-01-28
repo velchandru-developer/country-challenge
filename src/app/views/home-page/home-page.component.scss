@@ -1,35 +1,36 @@
 .country-page {
     background-color: var(--light-grey);
-    max-height: calc(100vh - 92px);
-    overflow: auto;
 
     .country-filters {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding: 40px 70px 0;
+        padding: 40px 70px 40px;
         gap: 40px;
 
         .country-input {
             width: 400px;
             background-color: var(--white);
             border-radius: 5px;
+            display: flex;
+            align-items: center;
 
             input {
-                padding: 20px 20px 20px 40px;
+                padding: 20px;
                 border: none;
                 width: calc(100% - 60px);
-                background: url(/search.svg) no-repeat scroll 11px 15px;
                 color: var(--black);
+                outline: none;
+                background-color: transparent;
 
                 &::placeholder {
                     color: var(--black);
                 }
-
-                &.dark-input {
-                    background: url(/search-white.svg) no-repeat scroll 11px 15px;
-                }
                 
+            }
+
+            .search-icon {
+                padding-left: 20px;
             }
         }
 
@@ -53,10 +54,12 @@
     }
 
     .country-wrap {
-        padding: 40px 60px 40px 70px;
+        padding: 0 60px 40px 70px;
         display: flex;
         flex-wrap: wrap;
         gap: 60px;
+        max-height: calc(100vh - 272px);
+        overflow: auto;
 
         .country {
             max-width: 220px;
