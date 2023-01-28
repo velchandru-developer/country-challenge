@@ -9,9 +9,9 @@ import { CountryPageComponent } from './views/country-page/country-page.componen
   ],
   imports: [
     RouterModule.forRoot([
-      { path: 'home', component: HomePageComponent  },
+      { path: '', component: HomePageComponent  },
       { path: 'country/:country', component: CountryPageComponent },
-      { path: '**', redirectTo: 'home' }
+      { path: '**', redirectTo: '' }
     ])
   ],
   exports: [

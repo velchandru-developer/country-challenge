@@ -25,7 +25,12 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/moon.svg",
+              "src/moon-white.svg",
+              "src/search.svg",
+              "src/search-white.svg",
+              "src/arrow-left.svg",
+              "src/arrow-left-white.svg"
             ],
             "styles": [
               "src/styles.scss"
